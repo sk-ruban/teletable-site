@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Teletext';
-    src: url('teletext50.otf') format('opentype');
+    src: url('fonts/Teletext50.otf') format('opentype');
 }
 
 body {
