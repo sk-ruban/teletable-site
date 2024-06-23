@@ -96,6 +96,13 @@ h1 {
     text-decoration: none;
 }
 
+.apple-icon {
+    width: 40px; 
+    height: 40px; 
+    margin-top: -8px; 
+    margin-right: 5px;
+}
+
 .featured {
     color: #FFFF00;
     display: block;
@@ -130,7 +137,7 @@ h1 {
 }
 
 .feature-icon {
-    font-size: 24px;
+    font-size: 23px;
     margin-bottom: 10px;
     color: #FFFF00;
 }
@@ -186,6 +193,11 @@ body::after {
     z-index: 2000;
 }
 
+video {
+    width: 50%;
+    height: auto;
+    }
+
 @media (max-width: 1200px) {
     .features {
         grid-template-columns: repeat(3, 1fr);
@@ -196,10 +208,92 @@ body::after {
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
+    video {
+        width: 80%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .features {
         grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .download-section .button {
+        font-size: 15px;
+        padding: 5px 10px;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .apple-icon {
+        width: 33px; 
+        height: 33px; 
+        margin-top: -6px; 
+        margin-right: 4px;
+    }
+    video {
+        width: 100%;
+    }
+}
+
+.leagues-info {
+background-color: #FF00FF; 
+color: #000000; 
+padding: 0 3px; 
+cursor: pointer;
+position: relative;
+display: inline-block;
+}
+
+.leagues-content {
+display: none;
+position: absolute;
+background-color: #000000;
+border: 2px solid #FFFFFF;
+padding: 10px;
+z-index: 1000;
+width: 200px;
+left: 50%;
+transform: translateX(-50%) translateY(-110%);
+/* transform: translateX(-20%);
+transform: translateY(-120%); */
+top: 100%;
+font-size: 14px; 
+line-height: 1.4;
+text-align: left;
+}
+
+.leagues-info:hover .leagues-content {
+display: block;
+}
+
+.leagues-list {
+color: #FFFFFF; /* White text for league list */
+}
+
+.leagues-list strong {
+color: #FFFF00; /* Yellow for the header */
+display: block;
+margin-bottom: 5px;
+}
+
+.feature {
+position: relative;
+}
+
+@media (max-width: 768px) {
+    .leagues-content {
+      width: 90vw; /* Use viewport width */
+      max-width: 300px; /* Set a max-width */
+      left: 50%;
+      transform: translateX(-50%) translateY(-20%);
+      top: auto;
+      bottom: 100%; /* Position above the text */
+    }
+  
+    .feature {
+      padding-bottom: 20px; /* Add some space below for the hover content */
     }
 }
